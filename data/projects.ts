@@ -6,37 +6,56 @@ export interface Project {
   slug: string;
 }
 
+
 export const projects: Project[] = [
   {
-    title: 'Driwwwle',
+    title: 'Reward Simulator',
     description:
-      'Discover creative websites and developers. A portal for you to share your projects.',
-    logo: '/logos/driwwwle.svg',
-    link: 'https://github.com/itsnitinr/driwwwle',
-    slug: 'driwwwle',
-  },
-  {
-    title: 'VSCode Portfolio',
-    description:
-      'A Visual Studio Code themed developer portfolio built with Next.js and CSS Modules.',
-    logo: '/logos/vsc.svg',
-    link: 'https://github.com/itsnitinr/vscode-portfolio',
-    slug: 'vscode-portfolio',
-  },
-  {
-    title: 'Subtrackt',
-    description:
-      'A simple and elegant way to track your subscriptions and save money.',
-    logo: '/logos/subtrackt.svg',
-    link: 'https://github.com/itsnitinr/subtrackt',
-    slug: 'subtrackt',
-  },
-  {
-    title: 'Coolify Deployments',
-    description:
-      'VSCode extension to track and deploy your Coolify applications.',
+      'A Flutter App made with Bloc to generate the working flow of reward based redeemption app',
     logo: '/logos/coolify.svg',
-    link: 'https://github.com/itsnitinr/coolify-vscode-extension',
-    slug: 'coolify-vscode-extension',
+    link: '',
+    slug: 'reward-simulator',
   },
+  {
+    title: 'BillSpill',
+    description:
+      'Difficulty in managing money on a trip? Welcome Billspill where you can log , track , settle,  manage all of the expenses as a group',
+    logo: '/logos/coolify.svg',
+    link: 'https://bill-spill-blue.vercel.app/',
+    slug: 'billspill',
+  },
+  {
+    title: 'Icosmic',
+    description:
+      'Inter-club events , collabarations , shows all information binded in one website with proper flow and exceution',
+    logo: '/logos/coolify.svg',
+    link: 'https://icosmic.vercel.app/',
+    slug: 'icosmic',
+  },
+  {
+    title: 'TypingTest',
+    description:
+      'Test you typing speed here',
+    logo: '/logos/coolify.svg',
+    link: 'https://typing-speed-test-psi.vercel.app/',
+    slug: 'typing-test',
+  },
+  {
+    title: 'Image-Ditor',
+    description:
+      'A simple webpage to upload and edit an image however way you like',
+    logo: '/logos/coolify.svg',
+    link: 'image-ditor.vercel.app',
+    slug: 'image-ditor',
+  },
+  {
+    title: 'Encrypto',
+    description:
+      'An app which uses two layer encryption and security to successfully transfer data from one end to another,  on which i have also publised an IEEE paper',
+    logo: '/logos/coolify.svg',
+    link: '',
+    slug: 'encrypto',
+  },
+
+ 
 ];
