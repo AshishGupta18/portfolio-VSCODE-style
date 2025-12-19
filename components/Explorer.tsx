@@ -17,8 +17,8 @@ const explorerItems = [
     icon: '/logos/html_icon.svg',
   },
   {
-    name: 'contact.css',
-    path: '/contact',
+    name: 'career.css',
+    path: '/career',
     icon: '/logos/css_icon.svg',
   },
   {
