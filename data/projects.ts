@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description:
       'An app which uses two layer encryption and security to successfully transfer data from one end to another,  on which i have also publised an IEEE paper',
     logo: '/logos/coolify.svg',
-    link: '',
+    link: 'https://ieeexplore.ieee.org/document/10463498',
     slug: 'encrypto',
   },
 

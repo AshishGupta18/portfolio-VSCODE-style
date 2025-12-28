@@ -9,37 +9,37 @@ const SettingsPage = () => {
         <ThemeInfo
           name="GitHub Dark"
           icon="/themes/github-dark.png"
-          publisher="GitHub"
+          publisher=""
           theme="github-dark"
         />
         <ThemeInfo
           name="Dracula"
           icon="/themes/dracula.png"
-          publisher="Dracula Theme"
+          publisher=""
           theme="dracula"
         />
         <ThemeInfo
           name="Ayu Dark"
           icon="/themes/ayu.png"
-          publisher="teabyii"
+          publisher=""
           theme="ayu-dark"
         />
         <ThemeInfo
           name="Ayu Mirage"
           icon="/themes/ayu.png"
-          publisher="teabyii"
+          publisher=""
           theme="ayu-mirage"
         />
         <ThemeInfo
           name="Nord"
           icon="/themes/nord.png"
-          publisher="arcticicestudio"
+          publisher=""
           theme="nord"
         />
         <ThemeInfo
           name="Night Owl"
           icon="/themes/night-owl.png"
-          publisher="sarah.drasner"
+          publisher=""
           theme="night-owl"
         />
       </div>
