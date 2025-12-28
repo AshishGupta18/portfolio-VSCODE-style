@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import GitHubCalendar from 'react-github-calendar';
-import { VscRepo, VscPerson } from 'react-icons/vsc';
+import Image from "next/image";
+import GitHubCalendar from "react-github-calendar";
+import { VscRepo, VscPerson } from "react-icons/vsc";
 
-import RepoCard from '@/components/RepoCard';
-import { Repo, User } from '@/types';
+import RepoCard from "@/components/RepoCard";
+import { Repo, User } from "@/types";
 
-import styles from '@/styles/GithubPage.module.css';
+import styles from "@/styles/GithubPage.module.css";
 
 interface GithubPageProps {
   repos: Repo[];
@@ -20,7 +20,7 @@ const GithubPage = ({ repos, user, error }: GithubPageProps) => {
         <div className={styles.pageHeading}>
           <h1 className={styles.pageTitle}>GitHub</h1>
           <p className={styles.pageSubtitle}>
-            {error || 'GitHub data is not available at the moment.'}
+            {error || "GitHub data is not available at the moment."}
           </p>
         </div>
       </div>
@@ -80,11 +80,11 @@ const GithubPage = ({ repos, user, error }: GithubPageProps) => {
             hideMonthLabels
             colorScheme="dark"
             theme={{
-              dark: ['#161B22', '#0e4429', '#006d32', '#26a641', '#39d353'],
-              light: ['#161B22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+              dark: ["#161B22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+              light: ["#161B22", "#0e4429", "#006d32", "#26a641", "#39d353"],
             }}
             style={{
-              width: '100%',
+              width: "100%",
             }}
           />
         </div>
@@ -99,10 +99,10 @@ export async function getStaticProps() {
   if (!username) {
     return {
       props: {
-        title: 'GitHub',
+        title: "GitHub",
         repos: [],
         user: null,
-        error: 'GitHub username not configured',
+        error: "GitHub username not configured",
       },
       revalidate: 600,
     };
@@ -110,35 +110,39 @@ export async function getStaticProps() {
 
   try {
     const userRes = await fetch(`https://api.github.com/users/${username}`);
-    
+
     if (!userRes.ok) {
       throw new Error(`Failed to fetch user: ${userRes.status}`);
     }
-    
+
     const user = await userRes.json();
 
     const repoRes = await fetch(
       `https://api.github.com/users/${username}/repos?sort=pushed&per_page=6`
     );
-    
+
     if (!repoRes.ok) {
       throw new Error(`Failed to fetch repos: ${repoRes.status}`);
     }
-    
+
     const repos = await repoRes.json();
 
     return {
-      props: { title: 'GitHub', repos: Array.isArray(repos) ? repos : [], user },
+      props: {
+        title: "GitHub",
+        repos: Array.isArray(repos) ? repos : [],
+        user,
+      },
       revalidate: 600,
     };
   } catch (error) {
-    console.error('Error fetching GitHub data:', error);
+    console.error("Error fetching GitHub data:", error);
     return {
       props: {
-        title: 'GitHub',
+        title: "GitHub",
         repos: [],
         user: null,
-        error: 'Failed to load GitHub data',
+        error: "Failed to load GitHub data",
       },
       revalidate: 600,
     };

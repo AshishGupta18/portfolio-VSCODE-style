@@ -1,7 +1,7 @@
-import ContactCode from '@/components/ContactCode';
+import ContactCode from "@/components/ContactCode";
 
-import styles from '@/styles/CareerPage.module.css';
-import { experience } from '@/data/experience';
+import styles from "@/styles/CareerPage.module.css";
+import { experience } from "@/data/experience";
 
 const CareerPage = () => {
   return (
@@ -11,12 +11,12 @@ const CareerPage = () => {
         Feel free to reach out to me through any of the social platforms below.
         I&apos;m always open to new opportunities and connections.
       </p>
-      {experience.map((experience) => (
-        <div className={styles.container}>
+      {experience.map((experience, index) => (
+        <div className={styles.container} key={index}>
           <div className={styles.contactContainer}>
             <ContactCode data={experience} />
           </div>
-      </div>
+        </div>
       ))}
     </div>
   );
@@ -24,9 +24,8 @@ const CareerPage = () => {
 
 export async function getStaticProps() {
   return {
-    props: { title: 'Experience' },
+    props: { title: "Experience" },
   };
 }
 
 export default CareerPage;
-
