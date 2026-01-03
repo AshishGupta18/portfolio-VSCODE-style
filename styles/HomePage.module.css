@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap");
 
 .container {
   max-width: 1200px;
@@ -17,7 +17,7 @@
   overflow: auto;
   position: relative;
   padding: 1rem 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -28,7 +28,7 @@
 
 .heroLayout {
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,7 @@
   width: 50px;
   background: var(--main-bg);
   color: #636e83;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 13px;
   user-select: none;
   text-align: right;
@@ -89,7 +89,7 @@
 .codeEditor {
   flex: 1;
   padding: 16px 20px 16px 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 13px;
   line-height: 1.5;
   color: var(--text-color);
@@ -125,7 +125,7 @@
 }
 
 .highlightedLine::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: -10px;
@@ -281,6 +281,21 @@
   transition: all 0.25s ease;
 }
 
+.secondaryLink {
+  color: var(--text-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.secondaryLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
 .primaryLink {
   background-color: var(--accent-color);
   color: white;
@@ -293,7 +308,7 @@
 }
 
 .primaryLink::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -362,7 +377,7 @@
 .codeBlock3,
 .codeBlock4 {
   position: absolute;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   color: rgba(var(--accent-color-rgb), 0.08);
   font-size: 180px;
   font-weight: 700;
@@ -450,7 +465,7 @@
 .codeSymbol2,
 .codeSymbol3 {
   position: absolute;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   color: rgba(255, 255, 255, 0.08);
   font-size: 120px;
   font-weight: 700;
@@ -687,7 +702,7 @@
 
   /* Remove the background gradient from heroLayout */
   .heroLayout::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(
@@ -699,7 +714,7 @@
   }
 
   .decorElements::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background-image: linear-gradient(
@@ -736,7 +751,7 @@
   }
 
   .mobileAccent::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 120px;
     height: 120px;
